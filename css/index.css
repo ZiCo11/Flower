@@ -6,6 +6,13 @@
     /*图片间距处理*/
     vertical-align: top;
 }
+a{
+    text-decoration: none;
+}
+a:hover{
+    color: orangered;
+    text-decoration: underline;
+}
 html, body{
     width: 100%;
     height: 100%;
@@ -358,22 +365,140 @@ html, body{
 }
 .tab .tab-cont{
     width: 100%;
-    background: #181818;
 }
 .tab .tab-cont .item:nth-child(1){
     width: 100%;
-    background: #c90000;
 }
 .tab .tab-cont .item:nth-child(2){
     width: 100%;
-    background: #1D7AD9;
 }
 .tab .tab-cont .item:nth-child(3){
     width: 100%;
-    background: #ff9c01;
 }
 .tab .tab-cont .item{
     display: none;
 }
-
-
+/*选项卡内容区块*/
+/*第一个区块*/
+.item-top{
+    width: 1244px;
+    height: 170px;
+    padding: 16px;
+    margin:  0 auto;
+}
+.item-top li{
+    float: left;
+    width: 236px;
+    height: 170px;
+    line-height: 170px;
+    text-align: center;
+    margin-left: 10px;
+    border-radius: 4px;
+    background: #c90000;
+}
+.item-top li a{
+    width: 236px;
+    height: 170px;
+    text-decoration: none;
+    color:#000000;
+    font-size: 20px;
+    display: inline-block;
+}
+.item-top li:nth-child(1) a{
+    background: url("http://static.googleadsserving.cn/pagead/imgad?id=CICAgKCbh8rvoQEQ7AEYqgEyCGTvEVrldH4k") ;
+    background-size: 236px 170px;
+}
+.item-top li:nth-child(2) a{
+    background: url("http://hbimg-other.b0.upaiyun.com/img/promotion/a8444fb562dfddf91cd94cf4a3764f84cfcf065510938") ;
+    background-size: 236px 170px;
+}
+.item-top li:nth-child(3) a{
+    background: url("http://hbimg-other.b0.upaiyun.com/img/promotion/388e195a7d9a126dcd6a0c049d120964f8af4dfb237f6") ;
+    background-size: 236px 170px;
+}
+.item-top li:nth-child(4) a{
+    background: url("http://hbimg-other.b0.upaiyun.com/img/promotion/2436649a79c805c0229b336307bd8fe977f636672384c") ;
+    background-size: 236px 170px;
+}
+.item-top li:nth-child(5) a{
+    background: url("http://hbimg-other.b0.upaiyun.com/img/promotion/118f6f44f0cb29198d1f2d8facc743f688e42a5d2af50") ;
+    background-size: 236px 170px;
+}
+/*瀑布流主体部分*/
+.item-pull{
+    position: relative;
+    width: 1244px;
+    height: 800px;
+    padding: 20px 0;
+    margin: 0 auto;
+}
+.item-pull .box{
+    float: left;
+    position: relative;
+    width: 234px;
+    border: 1px solid #ccc;
+    box-shadow:  0 1px 3px rgba(0, 0, 0, .3);
+}
+.item-pull .box .pic{
+    position: relative;
+    cursor: pointer;
+}
+.item-pull .box .pic img{
+    width: 234px;
+}
+/*文字*/
+.item-pull p{
+    line-height: 18px;
+    padding: 0 10px;
+    margin: 10px 0;
+    font-size: 12px;
+    word-wrap: break-word;
+}
+/*蒙版*/
+.item-pull .box .pic .cover{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255,255, .2);
+    display: none;
+}
+/*按钮*/
+.item-pull .box .btn-box{
+    position: absolute;
+    left: 6px;
+    top: 6px;
+    right: 6px;
+    display: none;
+    z-index: 3;
+}
+.item-pull .box .btn-box .collection{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 12px;
+    color: #fff;
+    font-size: 12px;
+    background-color: #c90000;
+}
+.item-pull .box .btn-box .like{
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 30px;
+    width: 30px;
+    border-radius: 5px;
+    background: #e27A00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.item-pull .box .btn-box .like .heart{
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background: url("../images/like.svg") 0 0 no-repeat;
+}
