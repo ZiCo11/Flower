@@ -1,6 +1,5 @@
-window.onload = function (ev) {
-    //获取scroll
-    scroll();
+window.onload = function () {
+    alert(11);
     //tab选项卡
     tab();
     //所有图片样式设置
@@ -8,7 +7,8 @@ window.onload = function (ev) {
     //瀑布流
     waterFall('item_pull', 'box');
     //滚动加载图片
-    window.onscroll = function () {
+    window.onmousemove = function () {
+        alert("00000");
         var up = document.getElementById('up');
 
         if(checkWillLoadImage()){
@@ -17,56 +17,60 @@ window.onload = function (ev) {
         }
         //回到顶部
         up.onclick = function () {
-            document.body.scrollTop = document.documentElement.scrollTop = 0;
+            // document.body.scrollTop = document.documentElement.scrollTop = 0;
             console.log(9);
         }
+    };
+//     登陆按钮绑定事件
+    var login = document.getElementById('login');
+    var mask = document.getElementById('mask');
+    login.onclick = function (ev) {
+        mask.style.display = 'block';
     }
-    //登陆按钮
-    loginBtn();
-};
+}
 
 //所有图片样式设置
 function autoCreateImg() {
     console.log('这里是子盒子图片样式设置，出现文字表明所有图片盒子样式设置成功');
     //1.数据 json
     var json = [
-            {
-                txt:'当我们正在为生活疲于奔命的时候，生活已经离我们却去',
-                src:'images/pic.jpg'
-            },
-            {
-                txt:'活在世上，不必什么都知道，只知道最好的就够了。——王小波',
-                src:'images/pic1.jpg'
-            },
-            {
-                txt:'很多人不需要再见，只是路过而已。——《彼岸花》',
-                src:'images/pic2.jpg'
-            },
-            {
-                txt:'我总是在日暮时分,书影与书影之间,宁静的悲哀里,最想念你。——亦舒',
-                src:'images/pic3.jpg'
-            },{
-                txt:'信任的深浅，不在于会不会对你笑，而在于愿不愿意在你面前哭。',
-                src:'images/pic4.jpg'
-            },{
-                txt:'不乱于心，不困于情。不畏将来，不念过往。如此，安好。',
-                src:'images/pic5.jpg'
-            },{
-                txt:'你如果认识从前的我，也许你会原谅现在的我。——张爱玲',
-                src:'images/pic6.jpg'
-            },{
-                txt:'水来，我在水中等你；火来，我在灰烬中等你。——《你是我的独家记忆》',
-                src:'images/pic7.jpg'
-            },{
-                txt:'梦里出现的人，醒来时就该去见她，生活就是这么简单。——《新桥恋人》',
-                src:'images/pic8.jpg'
-            },{
-                txt:'天下就没有偶然，那不过是化了妆的，戴了面具的必然。——钱钟书',
-                src:'images/pic9.jpg'
-            }
-        ];
+        {
+            txt:'当我们正在为生活疲于奔命的时候，生活已经离我们却去',
+            src:'images/pic.jpg'
+        },
+        {
+            txt:'当我们正在为生活疲于奔命的时候，生活已经离我们却去',
+            src:'images/pic1.jpg'
+        },
+        {
+            txt:'当我们正在为生活疲于奔命的时候，生活已经离我们却去',
+            src:'images/pic2.jpg'
+        },
+        {
+            txt:'当我们正在为生活疲于奔命的时候，生活已经离我们却去',
+            src:'images/pic3.jpg'
+        },{
+            txt:'当我们正在为生活疲于奔命的时候，生活已经离我们却去',
+            src:'images/pic4.jpg'
+        },{
+            txt:'当我们正在为生活疲于奔命的时候，生活已经离我们却去',
+            src:'images/pic5.jpg'
+        },{
+            txt:'当我们正在为生活疲于奔命的时候，生活已经离我们却去',
+            src:'images/pic6.jpg'
+        },{
+            txt:'当我们正在为生活疲于奔命的时候，生活已经离我们却去',
+            src:'images/pic7.jpg'
+        },{
+            txt:'当我们正在为生活疲于奔命的时候，生活已经离我们却去',
+            src:'images/pic8.jpg'
+        },{
+            txt:'当我们正在为生活疲于奔命的时候，生活已经离我们却去',
+            src:'images/pic9.jpg'
+        }
+    ];
     //2 遍历
-    for(var i=0;i<10;i++) {
+    for(var i=0;i<30;i++) {
         //    获取父标签文本
         var itemPull = document.getElementById('item_pull');
         var str = itemPull.innerHTML;
@@ -75,22 +79,22 @@ function autoCreateImg() {
         var pic = json[i].src;
         //    创建子标
         var htmlStr = "<div class='box'>" +
-                            <!--图片-->
-                            "<div class='pic'>" +
-                                "<img src=" + pic + " alt=''>" +
-                            <!--图片蒙版-->
-                                "<div class='cover'></div>" +
-                            "</div>" +
-                            <!--文字-->
-                            "<p>" + txt + "</p>" +
-                            <!--图片蒙版 按钮-->
-                            "<div class='btn-box'>" +
-                                "<a href='' class='collection'>采集</a>" +
-                                "<a href='' class='like'>" +
-                                "<span class='heart'></span>" +
-                                "</a>" +
-                            "</div>" +
-                       "</div>";
+            <!--图片-->
+            "<div class='pic'>" +
+            "<img src=" + pic + " alt=''>" +
+            <!--图片蒙版-->
+            "<div class='cover'></div>" +
+            "</div>" +
+            <!--文字-->
+            "<p>" + txt + "</p>" +
+            <!--图片蒙版 按钮-->
+            "<div class='btn-box'>" +
+            "<a href='' class='collection'>采集</a>" +
+            "<a href='' class='like'>" +
+            "<span class='heart'></span>" +
+            "</a>" +
+            "</div>" +
+            "</div>";
 
         //        拼接
         str += htmlStr;
@@ -108,7 +112,7 @@ function autoCreateImg() {
             };
             wrapBox[k].onmouseout =function () {
                 this.childNodes[2].style.display = 'none'
-        };
+            };
             // 所有子元素的蒙版 绑定事件
             wrapPic[k].onmouseover =function () {
                 this.childNodes[1].style.display = 'block'
@@ -147,8 +151,7 @@ function tab() {
         })(i);
     }
 }
-
-// 瀑布流函数
+//瀑布流
 function waterFall(parent, child) {
     // 父盒子居中，取得所有父盒字
     //先获得父元素及其底下所有的子元素
@@ -199,16 +202,14 @@ function waterFall(parent, child) {
             //更新数组
             // heightArr[minBoxIndex]+= boxHeight;
             arrH[minIndex] += boxH;
-            console.log("父盒字完成")
         }
     }
     // 更新父盒子的高度
     var parentHeight = allBox[allBox.length - 1].offsetTop + allBox[allBox.length - 1].offsetHeight;
     oParent.style.height = parentHeight;
-    console.log("父盒字高度完成");
+    console.log(1);
 }
-
-//获取最小下标函数
+//获取最矮盒子索引
 function getMinBoxIndex(arr, min) {
     for(var i=0;i<arr.length;i++){
         if(arr[i] === min){
@@ -217,7 +218,25 @@ function getMinBoxIndex(arr, min) {
     }
 }
 
-// scrool函数
+//判断是否具备加载图片的条件
+function checkWillLoadImage() {
+    console.log('判断是否具备加载图片的条件');
+    // 1. 获取最后一个盒子
+    var allBox = document.getElementsByClassName("box");
+    var lastBox = allBox[allBox.length - 1];
+
+    // 2. 求出最后一个盒子自身高度的一半 + offsetTop
+    var lastBoxDis = lastBox.offsetHeight * 0.5 + lastBox.offsetTop;
+
+    // 3. 求出屏幕的高度
+    var screenW = document.body.clientHeight || document.documentElement.clientHeight;
+
+    // 4. 求出页面偏离浏览器的高度
+    var scrollTop = scroll().top;
+
+    return lastBoxDis <= screenW + scrollTop;
+}
+//scroll
 function scroll() {
     if(window.pageYOffset){ // IE9+ 和最新的浏览器
         return {
@@ -238,35 +257,3 @@ function scroll() {
 
 }
 
-//检查图片加载
-function checkWillLoadImage() {
-    console.log('图片加载完成');
-    // 1. 获取最后一个盒子
-    var allBox = document.getElementsByClassName("box");
-    var lastBox = allBox[allBox.length - 1];
-    // 2. 求出最后一个盒子自身高度的一半 + offsetTop
-    var lastBoxDis = lastBox.offsetHeight * 0.5 + lastBox.offsetTop;
-
-    // 3. 求出屏幕的高度
-    var screenW = document.body.clientHeight || document.documentElement.clientHeight;
-
-    // 4. 求出页面偏离浏览器的高度
-    var scrollTop = scroll().top;
-
-    return lastBoxDis <= screenW + scrollTop;
-}
-
-//登陆按钮
-function loginBtn() {
-    //     登陆按钮绑定事件
-    var loginBtn = document.getElementById('login');
-    var mask = document.getElementById('mask');
-    var closeBtn = document.getElementById('close_btn');
-    loginBtn.onclick = function () {
-        mask.style.display = 'block';
-    };
-    closeBtn.onclick = function () {
-        mask.style.display = 'none';
-    };
-    console.log("登陆按钮蒙版完成");
-}
