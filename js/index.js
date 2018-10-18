@@ -270,3 +270,14 @@ function loginBtn() {
     };
     console.log("登陆按钮蒙版完成");
 }
+//轮播
+function bannerAutoPlay() {
+//    获取所有的li标签
+    var aBanner = document.getElementById('slider_banner');
+    var aLis = aBanner.getElementsByTagName('li');
+    var index = 0;
+//    设置定时器
+    setInterval(function () {
+
+    },1000);
+}
