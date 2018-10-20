@@ -1,0 +1,675 @@
+/*初始化*/
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    /*图片间距处理*/
+    vertical-align: top;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    color: orangered;
+    text-decoration: underline;
+}
+html, body{
+    width: 100%;
+    height: 100%;
+}
+.page{
+    width: 100%;
+    /*内容撑开*/
+    height: auto;
+    /*为吸顶效果预留空间*/
+    padding-top: 48px;
+}
+/*头部样式*/
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 48px;
+    background-color: #fff;
+    z-index: 999;
+}
+.header .header-inner{
+    width: 1244px;
+    height: 100%;
+    margin: 0 auto;
+}
+.header .header-inner .header-left{
+    float: left;
+    width: 435px;
+    height: 28px;
+    margin-top: 10px;
+}
+.header .header-inner .header-left li{
+    float: left;
+    margin-right: 20px;
+}
+.header .header-inner .header-left li a{
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    line-height: 28px;
+    font-size: 14px;
+    color: #444444;
+}
+.header .header-inner .header-left li a:hover{
+    color: #c90000;
+}
+.header .header-inner .header-left li:nth-child(7) a{
+    font-size: 25px;
+    line-height: 14px;
+}
+.header .header-inner .header-left .new{
+    width: 30px;
+    height: 14px;
+    font-size: 12px;
+    margin-top: 6px;
+    margin-left: 2px;
+    color: #fff;
+    background-color: #f4a523;
+    display: inline-block;
+    line-height: 12px;
+}
+.header .header-inner .header-left .logo-pic a{
+    width: 80px;
+    height: 28px;
+    display: inline-block;
+    background: url("../images/logo.svg") 0 0 no-repeat;
+}
+/*顶部中间搜索栏*/
+.header .header-inner .header-center {
+    float: left;
+    width: 675px;
+    height: 34px;
+    margin-top: 7px;
+}
+.header .header-inner .header-center input{
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+    outline: none;
+    background-color: #fafafa;
+    border: 1px solid #ddd;
+}
+.header .header-inner .header-right{
+    float: right;
+    width: 116px;
+    height: 48px;
+}
+.header .header-inner .header-right a {
+    float: right;
+    width: 52px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+    color: #383838;
+    border: 1px solid #d9d9d9;
+    margin-top: 7px;
+    font-size: 16px;
+    border-radius: 2px;
+}
+.header .header-inner .header-right a:nth-child(1){
+    float: left;
+    /*渐变色*/
+    background: linear-gradient(#E53E49, #D43636);
+    color: #fff;
+    border: 1px solid #c90000;
+}
+.header .header-inner .header-right a:nth-child(1):hover{
+    background-color: #E53E49 ;
+}
+/*轮播广告*/
+.slider-banner{
+    width: 100%;
+    height: 60px;
+}
+.slider-banner ul{
+    position: relative;
+    width: 100%;
+    height: 60px;
+}
+.slider-banner ul li{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+}
+.slider-banner ul li a{
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+}
+.slider-banner ul li a:nth-child(1){
+    background: url("https://hbimg-other.b0.upaiyun.com/img/promotion/3a5458d81406a4e622a2d6c4d54067a55592ffa7e7f9") center center;
+}
+.slider-banner ul li a:nth-child(2){
+    background: url("https://hbimg-other.b0.upaiyun.com/img/promotion/3a5458d81406a4e622a2d6c4d54067a55592ffa7e7f9") center center;
+}
+.slider-banner ul li a:nth-child(3){
+    background: url("https://hbimg-other.b0.upaiyun.com/img/promotion/3a5458d81406a4e622a2d6c4d54067a55592ffa7e7f9") center center;
+}
+.slider-banner ul li a:nth-child(4){
+    background: url("https://hbimg-other.b0.upaiyun.com/img/promotion/3a5458d81406a4e622a2d6c4d54067a55592ffa7e7f9") center center;
+}
+.slider-banner ul li a:nth-child(5){
+    background: url("https://hbimg-other.b0.upaiyun.com/img/promotion/3a5458d81406a4e622a2d6c4d54067a55592ffa7e7f9") center center;
+}
+.slider-banner ul li a:nth-child(6){
+    background: url("https://hbimg-other.b0.upaiyun.com/img/promotion/3a5458d81406a4e622a2d6c4d54067a55592ffa7e7f9") center center;
+}
+.slider-banner ul li a:nth-child(7){
+    background: url("https://hbimg-other.b0.upaiyun.com/img/promotion/3a5458d81406a4e622a2d6c4d54067a55592ffa7e7f9") center center;
+}
+/*快速登录*/
+.quick-login{
+    width: 100%;
+    height: 120px;
+    background: url("../images/login_header_blurbg.jpg") center center;
+}
+.quick-login-in{
+    width: 1244px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    color: #000000;
+}
+/*伸缩布局*/
+.quick-login .quick-login-in .intro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center ;
+}
+.quick-login .quick-login-in .intro .title{
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+.quick-login .quick-login-in .login_icon{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.quick-login .quick-login-in .login_icon li{
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 5px;
+}
+.quick-login .quick-login-in .login_icon li a{
+    width: 54px;
+    height: 54px;
+    display: inline-block;
+}
+.quick-login .quick-login-in .login_icon li:nth-child(1) a{
+    background: url("http://huaban.com/img/login_icons_tiny.svg") 0 -80px;
+}
+.quick-login .quick-login-in .login_icon li:nth-child(2) a{
+    background: url("http://huaban.com/img/login_icons_tiny.svg") -80px -80px ;
+}
+.quick-login .quick-login-in .login_icon li:nth-child(3) a{
+    background: url("http://huaban.com/img/login_icons_tiny.svg") -160px -80px;
+}
+.quick-login .quick-login-in .login_icon li:nth-child(4) a{
+    background: url("http://huaban.com/img/login_icons_tiny.svg") -240px -80px;
+}
+.quick-login .quick-login-in .login_icon .tip-text{
+    position: relative;
+}
+.quick-login .quick-login-in .login_icon .tip-text .line-left{
+    position: absolute;
+    top: 14px;
+    left: -40px;
+    width: 40px;
+    border-top: 1px solid black;
+    display: block;
+}
+.quick-login .quick-login-in .login_icon .tip-text .line-right{
+    position: absolute;
+    top: 14px;
+    right: -40px;
+    width: 40px;
+    border-top: 1px solid black;
+    display: block;
+}
+/*吸顶效果*/
+.top-nav{
+    position: fixed;
+    left: 0;
+    /*header的高度*/
+    top: 48px;
+    width: 100%;
+    height: 70px;
+    display: none;
+    background-color: rgba(0, 0, 0, .5);
+}
+.top-nav .top-in{
+    width: 1244px;
+    margin: 0 auto;
+    height: 100% ;
+}
+.top-nav .top-in>div{
+    width: 350px;
+    height: 100%;
+    color: #fff;
+}
+.top-nav .top-in .top-nav-left{
+    float: left;
+}
+.top-nav .top-in .top-nav-left p:nth-child(1){
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 10px;
+}
+.top-nav .top-in .top-nav-right{
+    float: right;
+    padding-top: 15px;
+    box-sizing: border-box;
+}
+.top-nav .top-in .top-nav-right ul li{
+    float: left;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    margin-left:8px;
+}
+.top-nav .top-in .top-nav-right ul li a{
+    width: 42px;
+    height: 42px;
+    display: inline-block;
+}
+.top-nav .top-in .top-nav-right li:nth-child(1){
+    width: 138px;
+    font-size: 14px;
+    line-height: 42px;
+}
+.top-nav .top-in .top-nav-right ul li:nth-child(2) {
+    background: url("http://huaban.com/img/login_icons_tiny.svg") 0 -95px;
+    background-size: 230px 135px;
+}
+.top-nav .top-in .top-nav-right ul li:nth-child(3) {
+    background: url("http://huaban.com/img/login_icons_tiny.svg")  -100px -95px;
+    background-size: 230px 135px;
+}
+.top-nav .top-in .top-nav-right ul li:nth-child(4) {
+    background: url("http://huaban.com/img/login_icons_tiny.svg")  -150px -95px;
+    background-size: 230px 135px;
+}
+.top-nav .top-in .top-nav-right ul li:nth-child(5) {
+    background: url("http://huaban.com/img/login_icons_tiny.svg")  -280px -95px;
+    background-size: 230px 135px;
+}
+/*选项卡部分*/
+/*选项卡顶部title*/
+.type-title{
+    width: 100%;
+    height: 130px;
+}
+.type-title .type-title-in{
+    position: relative;
+    width: 230px;
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 130px;
+    font-size: 30px;
+    color: #666;
+}
+.type-title .type-title-in .line-left,
+.type-title .type-title-in .line-right{
+    position: absolute;
+    top: 65px;
+    width: 48px;
+    border: 1px solid #666;
+}
+.type-title .type-title-in .line-left{
+    left: 15px;
+}
+.type-title .type-title-in .line-right{
+    right: 15px;
+}
+/*选项卡主体*/
+.tab{
+    width: 100%;
+    height: auto;
+}
+.tab .tab-header{
+    width: 300px;
+    height: 48px;
+    margin: 0 auto;
+}
+.tab .tab-header ul li{
+    float: left;
+    width: 100px;
+    line-height: 47px;
+    font-size: 18px;
+    text-align: center;
+    cursor: pointer;
+}
+.tab .tab-header ul .current{
+    border-bottom: 1px solid orangered;
+    color: orangered;
+}
+.tab .tab-cont{
+    width: 100%;
+}
+.tab .tab-cont .item:nth-child(1){
+    width: 100%;
+}
+.tab .tab-cont .item:nth-child(2){
+    width: 100%;
+}
+.tab .tab-cont .item:nth-child(3){
+    width: 100%;
+}
+.tab .tab-cont .item{
+    display: none;
+}
+/*选项卡内容区块*/
+/*第一个区块*/
+.item-top{
+    width: 1244px;
+    height: 170px;
+    padding: 16px;
+    margin:  0 auto;
+}
+.item-top li{
+    float: left;
+    width: 236px;
+    height: 170px;
+    line-height: 170px;
+    text-align: center;
+    margin-left: 10px;
+    border-radius: 4px;
+    background: #c90000;
+}
+.item-top li a{
+    width: 236px;
+    height: 170px;
+    text-decoration: none;
+    color:#000000;
+    font-size: 20px;
+    display: inline-block;
+}
+.item-top li:nth-child(1) a{
+    background: url("http://static.googleadsserving.cn/pagead/imgad?id=CICAgKCbh8rvoQEQ7AEYqgEyCGTvEVrldH4k") ;
+    background-size: 236px 170px;
+}
+.item-top li:nth-child(2) a{
+    background: url("http://hbimg-other.b0.upaiyun.com/img/promotion/a8444fb562dfddf91cd94cf4a3764f84cfcf065510938") ;
+    background-size: 236px 170px;
+}
+.item-top li:nth-child(3) a{
+    background: url("http://hbimg-other.b0.upaiyun.com/img/promotion/388e195a7d9a126dcd6a0c049d120964f8af4dfb237f6") ;
+    background-size: 236px 170px;
+}
+.item-top li:nth-child(4) a{
+    background: url("http://hbimg-other.b0.upaiyun.com/img/promotion/2436649a79c805c0229b336307bd8fe977f636672384c") ;
+    background-size: 236px 170px;
+}
+.item-top li:nth-child(5) a{
+    background: url("http://hbimg-other.b0.upaiyun.com/img/promotion/118f6f44f0cb29198d1f2d8facc743f688e42a5d2af50") ;
+    background-size: 236px 170px;
+}
+/*瀑布流主体部分*/
+.item-pull{
+    position: relative;
+    width: 1244px;
+    height: 800px;
+    padding: 20px 0;
+    margin: 0 auto;
+}
+.item-pull .box{
+    float: left;
+    position: relative;
+    width: 234px;
+    border: 1px solid #ccc;
+    box-shadow:  0 1px 3px rgba(0, 0, 0, .3);
+}
+.item-pull .box .pic{
+    position: relative;
+    cursor: pointer;
+}
+.item-pull .box .pic img{
+    width: 234px;
+}
+/*文字*/
+.item-pull p{
+    line-height: 18px;
+    padding: 0 10px;
+    margin: 10px 0;
+    font-size: 12px;
+    word-wrap: break-word;
+}
+/*蒙版*/
+.item-pull .box .pic .cover{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255,255, .2);
+    display: none;
+}
+/*按钮*/
+.item-pull .box .btn-box{
+    position: absolute;
+    left: 6px;
+    top: 6px;
+    right: 6px;
+    display: none;
+    z-index: 3;
+}
+.item-pull .box .btn-box .collection{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 12px;
+    color: #fff;
+    font-size: 12px;
+    background-color: #c90000;
+}
+.item-pull .box .btn-box .like{
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 30px;
+    width: 30px;
+    border-radius: 5px;
+    background: #e27A00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.item-pull .box .btn-box .like .heart{
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background: url("http://huaban.com/img/action_like.svg") 0 0 no-repeat;
+}
+/*右下角 箭头 回到顶部*/
+.elevator-item{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+}
+.elevator-item .up{
+    width: 40px;
+    height: 36px;
+    margin-bottom: 8px;
+    background: url("../images/up.png") 8px 6px no-repeat;
+    display: inline-block;
+    background-color: #444;
+    background-color: rgba(0,0,0,.4);
+    border-radius: 4px;
+}
+.elevator-item .up:hover{
+    background-color: rgba(0,0,0,.8);
+}
+.elevator-item .plus{
+    width: 40px;
+    height: 36px;
+    background: url("../images/up.png") 8px -33px no-repeat;
+    display: inline-block;
+    background-color: #444;
+    background-color: rgba(0,0,0,.4);
+    border-radius: 4px;
+}
+.elevator-item .plus:hover{
+    background-color: rgba(0,0,0,.8);
+}
+/*登陆 蒙版*/
+.mask{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 99999;
+    background-color: rgba(0,0,0,.4);
+}
+.mask .wrap{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -260px;
+    margin-top: -210px;
+    width: 520px;
+    height: 420px;
+    border-radius: 5px;
+    /*padding会撑开高度*/
+    padding: 30px;
+    /*boxsizing 会让溢出的宽度固定在设置的宽度里面*/
+    box-sizing: border-box;
+    background-color: white;
+}
+.mask .wrap .comW{
+    width: 286px;
+    margin: 20px auto 0;
+}
+.mask .wrap .close-btn{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    height: 18px;
+    width: 18px;
+    display: inline-block;
+    background: url("../images/close.png") 0 0 no-repeat;
+}
+.mask .wrap .logo{
+    width: 106px;
+    height: 36px;
+    margin: 0 auto;
+}
+.mask .wrap .logo img{
+    width: 106px;
+    display: block;
+    margin: 0 auto;
+}
+.mask .wrap .m-login{
+    width:300px ;
+    margin: 20px auto;
+    text-align: center;
+}
+.mask .wrap .m-login p{
+    color: #999;
+    padding: 5px auto;
+}
+.mask .wrap .m-login .login-item{
+    margin: 15px 0 80px;
+    text-align: center;
+}
+.mask .wrap .m-login .login-item a{
+    float: left;
+    width: 48px;
+    height: 48px;
+    margin-right: 10px;
+    display: inline-block;
+}
+.mask .wrap .m-login .login-item a:nth-child(1){
+    background: url('http://huaban.com/img/login_icons_tiny.svg') 0 0 no-repeat;
+}
+.mask .wrap .m-login .login-item a:nth-child(2){
+    background: url('http://huaban.com/img/login_icons_tiny.svg') -80px 0 no-repeat;
+}
+.mask .wrap .m-login .login-item a:nth-child(3){
+    background: url('http://huaban.com/img/login_icons_tiny.svg') -160px 0 no-repeat;
+}
+.mask .wrap .m-login .login-item a:nth-child(4){
+    background: url('http://huaban.com/img/login_icons_tiny.svg') -240px 0 no-repeat;
+}
+.mask .wrap .m-login .login-item a:nth-child(5){
+    background: url('http://huaban.com/img/login_icons_tiny.svg') -320px 0 no-repeat;
+}
+
+.mask .wrap .mail-login {
+    margin-top: 15px;
+}
+
+.mask .wrap .mail-login .clear-input {
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.clear-input {
+    display: inline-block;
+    padding: 0 5px;
+    height: 36px;
+    font-size: 16px;
+    line-height: 1;
+    color: #777;
+    background: #FCFCFC;
+    border: 1px solid #CCC;
+    border-radius: 3px;
+    width: 200px;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,.05);
+    -webkit-transition: color .2s linear,border-color .3s linear;
+}
+
+.btn18 {
+    font-size: 18px;
+    padding: 0 10px;
+    border-radius: 3px;
+    height: 36px;
+    line-height: 36px;
+}
+
+.rbtn {
+    display: block;
+    background: #E53E49;
+    background: linear-gradient( #E53E49, #D43636);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.08), 0 1px 0 rgba(255,255,255,.3);
+    text-shadow: 0 -1px 0 rgba(0,0,0,.1);
+    color: #fff;
+    border: 1px solid #C90000;
+    text-align: center;
+    text-decoration: none;
+}
+.m-regist{
+    text-align: center;
+    margin: 10px 0;
+}
+.m-regist a {
+    text-decoration: none;
+    color: #c90000;
+}
+.m-regist a:hover{
+    text-decoration: underline;
+}
