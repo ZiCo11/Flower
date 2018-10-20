@@ -214,16 +214,16 @@ html, body{
     display: inline-block;
 }
 .quick-login .quick-login-in .login_icon li:nth-child(1) a{
-    background: url("../images/login_icons_tiny.svg") 0 -80px;
+    background: url("http://huaban.com/img/login_icons_tiny.svg") 0 -80px;
 }
 .quick-login .quick-login-in .login_icon li:nth-child(2) a{
-    background: url("../images/login_icons_tiny.svg") -80px -80px ;
+    background: url("http://huaban.com/img/login_icons_tiny.svg") -80px -80px ;
 }
 .quick-login .quick-login-in .login_icon li:nth-child(3) a{
-    background: url("../images/login_icons_tiny.svg") -160px -80px;
+    background: url("http://huaban.com/img/login_icons_tiny.svg") -160px -80px;
 }
 .quick-login .quick-login-in .login_icon li:nth-child(4) a{
-    background: url("../images/login_icons_tiny.svg") -240px -80px;
+    background: url("http://huaban.com/img/login_icons_tiny.svg") -240px -80px;
 }
 .quick-login .quick-login-in .login_icon .tip-text{
     position: relative;
@@ -296,19 +296,19 @@ html, body{
     line-height: 42px;
 }
 .top-nav .top-in .top-nav-right ul li:nth-child(2) {
-    background: url("../images/login_icons_tiny.svg") 0 -95px;
+    background: url("http://huaban.com/img/login_icons_tiny.svg") 0 -95px;
     background-size: 230px 135px;
 }
 .top-nav .top-in .top-nav-right ul li:nth-child(3) {
-    background: url("../images/login_icons_tiny.svg")  -100px -95px;
+    background: url("http://huaban.com/img/login_icons_tiny.svg")  -100px -95px;
     background-size: 230px 135px;
 }
 .top-nav .top-in .top-nav-right ul li:nth-child(4) {
-    background: url("../images/login_icons_tiny.svg")  -150px -95px;
+    background: url("http://huaban.com/img/login_icons_tiny.svg")  -150px -95px;
     background-size: 230px 135px;
 }
 .top-nav .top-in .top-nav-right ul li:nth-child(5) {
-    background: url("../images/login_icons_tiny.svg")  -280px -95px;
+    background: url("http://huaban.com/img/login_icons_tiny.svg")  -280px -95px;
     background-size: 230px 135px;
 }
 /*选项卡部分*/
@@ -499,7 +499,7 @@ html, body{
     display: inline-block;
     width: 14px;
     height: 14px;
-    background: url("../images/like.svg") 0 0 no-repeat;
+    background: url("http://huaban.com/img/action_like.svg") 0 0 no-repeat;
 }
 /*右下角 箭头 回到顶部*/
 .elevator-item{
@@ -603,19 +603,19 @@ html, body{
     display: inline-block;
 }
 .mask .wrap .m-login .login-item a:nth-child(1){
-    background: url('../images/login_icons_tiny.svg') 0 0 no-repeat;
+    background: url('http://huaban.com/img/login_icons_tiny.svg') 0 0 no-repeat;
 }
 .mask .wrap .m-login .login-item a:nth-child(2){
-    background: url('../images/login_icons_tiny.svg') -80px 0 no-repeat;
+    background: url('http://huaban.com/img/login_icons_tiny.svg') -80px 0 no-repeat;
 }
 .mask .wrap .m-login .login-item a:nth-child(3){
-    background: url('../images/login_icons_tiny.svg') -160px 0 no-repeat;
+    background: url('http://huaban.com/img/login_icons_tiny.svg') -160px 0 no-repeat;
 }
 .mask .wrap .m-login .login-item a:nth-child(4){
-    background: url('../images/login_icons_tiny.svg') -240px 0 no-repeat;
+    background: url('http://huaban.com/img/login_icons_tiny.svg') -240px 0 no-repeat;
 }
 .mask .wrap .m-login .login-item a:nth-child(5){
-    background: url('../images/login_icons_tiny.svg') -320px 0 no-repeat;
+    background: url('http://huaban.com/img/login_icons_tiny.svg') -320px 0 no-repeat;
 }
 
 .mask .wrap .mail-login {
@@ -673,4 +673,3 @@ html, body{
 .m-regist a:hover{
     text-decoration: underline;
 }
-

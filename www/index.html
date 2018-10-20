@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>花瓣网</title>
-    <link rel="stylesheet" href="css/index.css">
-    <script src="js/jquery.js"></script>
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="jquery.js"></script>
 </head>
 <body>
     <div class="page">
@@ -14,7 +14,7 @@
                 <!--顶部左边logo栏-->
                 <div class="header-left">
                     <ul>
-                        <li class="logo-pic"><h1><a href="http://huaban.com/"></a></h1></li>
+                        <li class="logo-pic"><h1><a href="http://huaban.com/"><img src="http://huaban.com/img/logo.svg" alt=""></a></h1></li>
                         <li><a href="javascript:;">发现</a></li>
                         <li><a href="javascript:;">最美</a></li>
                         <li><a href="javascript:;">美思</a></li>
@@ -30,7 +30,7 @@
                 <!--右边登录栏-->
                 <div class="header-right">
                     <a class="login"  id="login" href="javascript:;"><span>登录</span></a>
-                    <a class="register" href="javascript:;"><span>注册</span></a>
+                    <a class="register" id="register" href="javascript:;"><span>注册</span></a>
                 </div>
             </div>
         </header>
@@ -141,7 +141,7 @@
             <!--关闭-->
             <a href="javascript:;" class="close-btn" id="close_btn"></a>
             <!--logo-->
-            <a href="javascript:;" class="logo"><img src="images/logo.svg" alt=""></a>
+            <a href="javascript:;" class="logo"><img src="./images/logo.svg" alt=""></a>
             <!--登陆区块-->
             <div class="comW">
                 <div class="m-login">
@@ -158,11 +158,14 @@
                 <!--输入区块-->
                 <form action="" class="mail-login">
                     <input type="text" placeholder="输入手机号码或邮箱" id="user" class="clear-input">
-                    <input type="text" placeholder="密码" id="pass" class="clear-input">
+                    <input type="password" placeholder="密码" id="pass" class="clear-input">
                     <a href="#" onclick="return false;" id="btn11" class="btn btn18 rbtn">
-                        <span class="text"> 登录
+                        <span class="text" >登录
                         </span>
-                    </a>
+                    </a><a href="#" onclick="return false;" id="btn12" class="btn btn18 rbtn">
+                        <span class="text" >注册
+                        </span>
+                </a>
                 </form>
                 <!--底部-->
                 <div class="m-regist">
@@ -174,7 +177,7 @@
 
         </div>
     </div>
-    <script src="js/index.js"></script>
-    <script src="js/ajax.js"></script>
+    <script src="index.js"></script>
+    <script src="ajax.js"></script>
 </body>
 </html>

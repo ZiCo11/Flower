@@ -20,9 +20,11 @@ window.onload = function (ev) {
             document.body.scrollTop = document.documentElement.scrollTop = 0;
             console.log(9);
         }
-    }
+    };
     //登陆按钮
     loginBtn();
+    //注册
+    regBtn();
 };
 
 //所有图片样式设置
@@ -256,20 +258,29 @@ function checkWillLoadImage() {
     return lastBoxDis <= screenW + scrollTop;
 }
 
-//登陆按钮
+//登陆注册按钮
 function loginBtn() {
-    //     登陆按钮绑定事件
     var loginBtn = document.getElementById('login');
+    var regBtn = document.getElementById('register');
+    var oBtn11 = document.getElementById('btn11');
+    var oBtn12 = document.getElementById('btn12');
     var mask = document.getElementById('mask');
     var closeBtn = document.getElementById('close_btn');
     loginBtn.onclick = function () {
         mask.style.display = 'block';
+        oBtn11.style.display = 'block';
+        oBtn12.style.display = 'none';
+    };
+    regBtn.onclick = function(){
+        mask.style.display = 'block';
+        oBtn12.style.display = 'block';
+        oBtn11.style.display = 'none';
     };
     closeBtn.onclick = function () {
         mask.style.display = 'none';
     };
-    console.log("登陆按钮蒙版完成");
 }
+
 //轮播
 function bannerAutoPlay() {
 //    获取所有的li标签
