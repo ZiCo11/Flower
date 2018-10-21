@@ -14,10 +14,6 @@ window.onload = function (ev) {
         var up = document.getElementById('up');
         var scrollTop = scroll().top;
         var oTop = document.getElementById('top_nav');
-<<<<<<< HEAD
-=======
-
->>>>>>> version01
 
         if(checkWillLoadImage()){
             autoCreateImg();
@@ -309,10 +305,7 @@ function bannerAutoPlay() {
     var index = 0;
 //    设置定时器
     setInterval(function () {
-<<<<<<< HEAD
-=======
         // 1.改变透明度
->>>>>>> version01
         for (var i=0;i<aLis.length;i++) {
             var singleLi = aLis[i];
             // 动画
@@ -324,20 +317,10 @@ function bannerAutoPlay() {
         if(index === aLis.length){
             index = 0;
         }
-<<<<<<< HEAD
+
     }, 2000);
 }
 // 动画效果
-=======
-    },2000);
-}
-/**
- * 缓动动画函数
- * @param {Object}obj
- * @param {Object}json
- * @param {function}fn
- */
->>>>>>> version01
 function buffer(obj, json, fn) {
     // 1. 清除定时器
     clearInterval(obj.timer);
@@ -392,16 +375,7 @@ function buffer(obj, json, fn) {
         }
     }, 60);
 }
-<<<<<<< HEAD
-// 获取css样式
-=======
-/**
- * 获取css的样式属性值
- * @param {Object}obj
- * @param {string}attr
- * @returns {*}
- */
->>>>>>> version01
+//获取css样式
 function getCssAttr(obj, attr) {
     if(obj.currentStyle){ // IE 和 Opera
         return obj.currentStyle[attr];
