@@ -19,7 +19,7 @@ $(function () {
     });
     $('#btn12').click(function () {
         $.ajax({
-            url: '/login',
+            url: '/reg',
             data: {user:$('#user').val(), pass:$('#pass').val()},
             dataType: 'json',
             success(res){
