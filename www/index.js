@@ -3,6 +3,8 @@ window.onload = function (ev) {
     scroll();
     //tab选项卡
     tab();
+    // 轮播图
+    bannerAutoPlay();
     //所有图片样式设置
     autoCreateImg();
     //瀑布流
@@ -10,6 +12,9 @@ window.onload = function (ev) {
     //滚动加载图片
     window.onscroll = function () {
         var up = document.getElementById('up');
+        var scrollTop = scroll().top;
+        var oTop = document.getElementById('top_nav');
+
 
         if(checkWillLoadImage()){
             autoCreateImg();
@@ -18,13 +23,17 @@ window.onload = function (ev) {
         //回到顶部
         up.onclick = function () {
             document.body.scrollTop = document.documentElement.scrollTop = 0;
-            console.log(9);
+        };
+        if (scrollTop >= 150) {
+            oTop.style.display = 'block';
+            up.style.display = 'block';
+        } else {
+            oTop.style.display = 'none';
+            up.style.display = 'none';
         }
     };
-    //登陆按钮
+    //登陆注册按钮
     loginBtn();
-    //注册
-    regBtn();
 };
 
 //所有图片样式设置
@@ -289,6 +298,90 @@ function bannerAutoPlay() {
     var index = 0;
 //    设置定时器
     setInterval(function () {
+        // 1.改变透明度
+        for (var i=0;i<aLis.length;i++) {
+            var singleLi = aLis[i];
+            // 动画
+            buffer(singleLi, {opacity:0}, null);
+        }
+        buffer(aLis[index],{opacity:1}, null);
+        // 索引++
+        index++;
+        if(index === aLis.length){
+            index = 0;
+        }
+    },2000);
+}
+/**
+ * 缓动动画函数
+ * @param {Object}obj
+ * @param {Object}json
+ * @param {function}fn
+ */
+function buffer(obj, json, fn) {
+    // 1. 清除定时器
+    clearInterval(obj.timer);
+    var begin = 0, end = 0;
 
-    },1000);
+    // 2. 设置定时器
+    obj.timer = setInterval(function () {
+        // 2.0 旗帜, 决定动画是否结束
+        var flag = true;
+        // 2.1 遍历
+        for(var k in json){
+            // 2.2.-1 求出起始值 和 结束值
+            if(k === 'opacity'){ // 透明度
+                //console.log(typeof(getCssAttr(obj, k)));
+                begin = parseInt( parseFloat(getCssAttr(obj, k)) * 100);
+                end = parseInt(parseFloat(json[k]) * 100);
+            }else if(k === 'scrollTop'){ // 滚动到头部
+                begin = obj.scrollTop;
+                end = parseInt(json[k]);
+            }else { // 正常情况
+                begin = parseInt(getCssAttr(obj, k));
+                end = parseInt(json[k]);
+            }
+            // 2.2.0 求出步长
+            var step = (end - begin) * 0.2;
+            step = step >=0 ? Math.ceil(step) : Math.floor(step);
+            // 2.2.1 计算起始位置
+            if(k === 'opacity'){
+                obj.style.opacity = (begin + step) / 100;
+                obj.style.filter = 'alpha(opacity=' + (begin + end)+')'; // 针对IE
+            }else if(k === 'scrollTop'){
+                obj.scrollTop = begin + step;
+            }else if(k === 'zIndex'){
+                obj.style[k] = json[k];
+            }else {
+                obj.style[k] = begin + step + 'px';
+            }
+
+            // 2.2.2 判断
+            if(begin !== end){
+                flag = false;
+            }
+        }
+
+        // 3.0 结束动画
+        if(flag){
+            clearInterval(obj.timer);
+            // 开启动画组中的下一组动画
+            if(fn){ // 判断有没有这个函数
+                fn();
+            }
+        }
+    }, 60);
+}
+/**
+ * 获取css的样式属性值
+ * @param {Object}obj
+ * @param {string}attr
+ * @returns {*}
+ */
+function getCssAttr(obj, attr) {
+    if(obj.currentStyle){ // IE 和 Opera
+        return obj.currentStyle[attr];
+    }else { // 遵循W3C的
+        return window.getComputedStyle(obj, null)[attr];
+    }
 }
