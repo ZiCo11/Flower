@@ -177,7 +177,7 @@ function waterFall(parent, child) {
     // 获取屏幕宽度
     var screenW = document.documentElement.clientWidth;
     // 求出列数
-    var cols = parseInt( screenW / boxWidth);
+    var cols = parseInt( 1244 / boxWidth);
     var xyMargin = 16;
 //    父盒子居中
 //     oParent.style.width = cols * boxWidth + 'px';
